@@ -24,9 +24,11 @@
         <div class="row">
           <div class="col-lg-9">
             <input class="form-control" type="text" name="question" id="question">
+            
           </div>
           <div class="col-lg-3">
-            <button class="btn btn-primary btn-block" id="submit-button">Send</button>
+            <!-- <button class="btn btn-primary btn-block" id="submit-button">Send</button> -->
+            <button type="button" class="btn btn-primary" id="submit-button">Send</button>
           </div>
         </div>
         <br>
@@ -59,7 +61,7 @@
                   question: $("#question").val()
               },
               success: function(result) {
-                $("#response").append("<br>Me: "+$("#question").val()+ "<br> Karabo: "+result.response);
+                $("#response").append("<br>Me: "+$("#question").val()+ "<br> Bot: "+result.response);
                 $("#question").val("")
               },
               error: function(result) {
